@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicons -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+
   <!-- Google -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,36 +22,75 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- FontAwesome -->
+
+  <script
+    src="https://kit.fontawesome.com/c53f7e277a.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
   <!-- Title -->
 
   <title>TNT | Property Maintenance</title>
 </head>
-<body class="wrapper">
+<body>
 
   <!-- Header -->
 
   <header>
-    <nav class="desktopNav">
-      <div class="companyLogo">
-        <div class="logoContainer">
-          <svg viewBox="0 0 65 90">
-            <g transform="matrix(2.8125,0,0,2.8125,-12.426002502441406,0)" stroke="none" fill="#59C9D5">
-              <path d="M27.377 11.377L16 0 4.623 11.377 16 22.753l11.377-11.376zM16 6.026l5.35 5.35L16 16.727l-5.35-5.35L16 6.026zM27.426 14.969l-5.664 5.664V32h5.664zM10.238 20.633l-5.664-5.664V32h5.664z"></path>
-            </g>
-          </svg>
+    <div class="wrapper">
+      <div class="navContainer">
+        <div class="companyLogo">
+          <div class="logoContainer">
+            <svg viewBox="0 0 65 90">
+              <g transform="matrix(2.8125,0,0,2.8125,-12.426002502441406,0)" stroke="none" fill="#59C9D5">
+                <path d="M27.377 11.377L16 0 4.623 11.377 16 22.753l11.377-11.376zM16 6.026l5.35 5.35L16 16.727l-5.35-5.35L16 6.026zM27.426 14.969l-5.664 5.664V32h5.664zM10.238 20.633l-5.664-5.664V32h5.664z"></path>
+              </g>
+            </svg>
+          </div>
+          <h1 class="companyName">TNT</h1>
         </div>
-        <h1 class="companyName">TNT</h1>
+        <nav class="desktopNav">
+          <ul class="navItems">
+            <li onclick="scrollToSection('services')" class="navItem">Services</li>
+            <li onclick="scrollToSection('projects')" class="navItem">Projects</li>
+            <li onclick="scrollToSection('about')" class="navItem">About Us</li>
+            <li onclick="scrollToSection('contact')" class="priorityNavItem">Get a Quote</li>
+          </ul>
+        </nav>
+        <div class="mobileNavContainer">
+          <button
+            type="button"
+            title="burger"
+            id="burger"
+            class="mobileNavOpen"
+            onclick="toggleMenu()"
+          >
+            <span class="burger"></span>
+          </button>
+          <nav class="mobileNav" id="mobileNav">
+            <ul>
+              <li onclick="scrollToSection('services')">Services</li>
+              <li onclick="scrollToSection('projects')">Projects</li>
+              <li onclick="scrollToSection('about')">About Us</li>
+              <li onclick="scrollToSection('contact')">Contact</li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <ul class="navItems">
-        <li onclick="scrollToSection('services')" class="navItem">Services</li>
-        <li onclick="scrollToSection('projects')" class="navItem">Projects</li>
-        <li onclick="scrollToSection('about')" class="navItem">About Us</li>
-        <li onclick="scrollToSection('contact')" class="priotityNavItem">Appointment</li>
-      </ul>
-    </nav>
-    <div class="banner">
-      <p class="companyDescription">Adding <span class="blueText">care</span> to your property</p>
-      <img class="bannerImg" src="assets/home1.jpg" alt=""/>
+      <div class="banner">
+        <p class="companyDescription">Adding <span class="blueText">care</span> to your property</p>
+        <div class="bannerImg">
+          <img src="assets/header_img.jpg" alt=""/>
+        </div>
+      </div>
+      <button type="button" onclick="scrollToSection('contact')" class="mobileContactButton">
+        Get a Quote
+        <span class="material-symbols-outlined">
+          priority
+        </span>
+      </button>
     </div>
   </header>
 
@@ -53,55 +99,58 @@
     <!-- Services -->
 
     <section id="services">
-      <p class="sectionTitle">Explore our services</p>
-      <div class="servicesContainer">
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Cleaning">
-            mop
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
-        </div>
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Landscaping">
-            grass
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
-        </div>
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Painting">
-            imagesearch_roller
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
-        </div>
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Handyman">
-            handyman
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
-        </div>
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Floral Designs">
-            local_florist
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
-        </div>
-        <div class="serviceItem">
-          <span class="material-symbols-outlined" data-title=" | Property Management">
-            real_estate_agent
-          </span>
-          <p class="serviceDescription">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
-          </p>
+      <div class="skewed"></div>
+      <div class="wrapper">
+        <p class="sectionTitle">Explore our services</p>
+        <div class="servicesContainer">
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Cleaning">
+              mop
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Landscaping">
+              grass
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Painting">
+              imagesearch_roller
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Handyman">
+              handyman
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Floral Designs">
+              local_florist
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
+          <div class="serviceItem">
+            <span class="material-symbols-outlined" data-title=" | Property Management">
+              real_estate_agent
+            </span>
+            <p class="serviceDescription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit alias dolores doloribus consequatur hic libero inventore ad asperiores porro beatae voluptatibus dignissimos ratione veniam, deserunt nemo molestiae culpa qui atque.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -109,35 +158,43 @@
     <!-- Projects -->
 
     <section id="projects">
+      <div class="wrapper">
       <p class="sectionTitle">Our work</p>
       <div class="projectsContainer">
-        <input type="radio" name="slider" id="item-1" checked>
-        <input type="radio" name="slider" id="item-2">
-        <input type="radio" name="slider" id="item-3">
-        <div class="cards">
-          <label class="card" for="item-1" id="img-1">
-            <img src="" alt="home" id="image-1">
-          </label>
-          <label class="card" for="item-2" id="img-2">
-            <img src="" alt="home" id="image-2">
-          </label>
-          <label class="card" for="item-3" id="img-3">
-            <img src="" alt="home" id="image-3">
-          </label>
+        <button class="prev" id="prevButton" title="previous">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div class="carouselContainer" onclick="toggleLightBox()">
+          <img class="carouselImage" id="carouselImage" src="" alt="">
         </div>
+        <button class="next" id="nextButton" title="next">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="lightBox" id="lightBox" onclick="toggleLightBox()">
+        <button class="close" title="close">
+          <i class="fa fa-close" aria-hidden="true"></i>
+        </button>
+        <img class="focusedImage" id="focusedImage" src="" alt="">
+      </div>
       </div>
     </section>
 
     <!-- About -->
 
     <section id="about">
-      <p class="sectionTitle">Meet the team</p>
-      <div class="aboutContainer">
-        <img class="aboutImg" src="assets/home2.jpg" alt="" />
-        <div class="aboutDescription">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, laboriosam fugiat ad at laborum cupiditate velit optio exercitationem aliquid ullam sequi quas sint voluptate nihil. Hic soluta veniam eum vitae.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eaque ipsa minus architecto est distinctio dolor atque nihil facere. Iusto?</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis illum vero facilis ipsam numquam quisquam aliquam, quasi ullam explicabo asperiores fugiat eveniet placeat ex illo suscipit laboriosam reiciendis error nostrum.</p>
+      <div class="skewedReverse"></div>
+      <div class="wrapper">
+        <p class="sectionTitle">Meet the team</p>
+        <div class="aboutContainer">
+          <div class="aboutImg">
+            <img src="assets/about_img.jpg" alt="" />
+          </div>
+          <div class="aboutDescription">
+            <p>Joe & Nicole, your trusted partners in property care! With a shared passion for excellence, respect, and a commitment to reliability, we are the dynamic duo you can rely on to nurture and safeguard your valuable investments.</p>
+            <p>At the core of our approach is a deep respect for both our clients and their properties. We understand that your space is more than just bricks and mortar; it's a place where memories are made and investments are secured.</p>
+            <p>You can count on us to be there when you need us, whether it's for routine maintenance, emergency repairs, or simply to offer advice and guidance. Our commitment to reliability means peace of mind for you, knowing that your property is in capable hands.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -145,10 +202,93 @@
     <!-- Contact -->
 
     <section id="contact">
-      <p class="sectionTitle">Contact Us</p>
-      <div class="contactContainer">
-        <input type="email" name="" id="">
-        <input type="text" name="" id="">
+      <div class="wrapper">
+        <p class="sectionTitle">Contact Us</p>
+        <div class="contactContainer">
+          <div class="socialContainer">
+            <ul id="socialList">
+              <li>
+                <a href="tel:421-911-120852" title="phone" data-title="Call us | +421-911-120852">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/sWNEELukPrjgFPbVA" target="_blank" title="location" data-title="Located in Zadar, Croatia">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@tntmaintenance.eu" title="email" data-title="Email us | info@tntmaintenance.eu">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="facebook" data-title="Follow us on Facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="instagram" data-title="Follow us on Instagram">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+    
+            <span class="socialTitle" id="socialTitle">Get in touch!</span>
+          </div>
+
+          
+          <div class="formContainer">
+            <div class="feedback" id="feedback"></div>
+            <form
+              class="contactForm"
+              id="contactForm"
+              role="form"
+              action="process_inquiry.php"
+              method="POST"
+            >
+              <div class="contactInput">
+                <label for="name" class="srOnly">Name</label>
+                <span id="nameError" class="nameError"></span>
+                <input
+                  class="nameInput"
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                  name="name"
+                  value=""
+                >
+              </div>
+        
+              <div class="contactInput">
+                <label for="email" class="srOnly">Email</label>
+                <span id="emailError" class="emailError"></span>
+                <input
+                  class="emailInput"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  name="email"
+                  value=""
+                >
+              </div>
+        
+              <label for="message" class="srOnly">Message</label>
+              <span id="messageError" class="messageError"></span>
+              <textarea
+                class="messageInput"
+                maxlength="2000"
+                id="message"
+                placeholder="What would you like us to take care of?"
+                name="message"
+              ></textarea>
+              
+              <button class="button" id="submit" type="submit">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -156,7 +296,7 @@
   <!-- Footer -->
 
   <footer>
-    <div class="footer">
+    <div class="footer wrapper">
       <p>Copyright &copy; <span id="year"></span></p>
       <div class="footerLogo">
         <svg viewBox="0 0 65 90">
