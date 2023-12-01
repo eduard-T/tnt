@@ -97,11 +97,7 @@ const imageSources = [
   'assets/project_6.jpg',
   'assets/project_7.jpg',
   'assets/project_8.jpg',
-  'assets/project_9.jpg',
-  'assets/project_10.jpg',
-  'assets/project_11.jpg',
-  'assets/project_12.jpg',
-  'assets/project_13.jpg'
+  'assets/project_9.jpg'
 ]
 
 // start the slideshow
@@ -155,6 +151,8 @@ nextButton.addEventListener('click', () => {
 })
 
 // ---------------------------- Social Icons ---------------------------- //
+
+let timeoutId
 
 // hover listener for icons
 socialList.addEventListener('mouseover', (event) => {

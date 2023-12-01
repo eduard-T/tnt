@@ -515,12 +515,10 @@ img {
   position: relative;
   border-radius: 64px;
   border-top-left-radius: 8px;
-  flex-basis: 300px;
+  flex-basis: 400px;
   aspect-ratio: 2/1;
   padding: 32px;
   padding-top: 64px;
-  display: grid;
-  place-items: center;
 }
 
 .serviceItem span {
@@ -535,6 +533,8 @@ img {
 .serviceDescription {
   opacity: 0;
   color: #000;
+  padding-top: 8px;
+  padding-bottom: 12px;
 }
 
 .serviceItem:hover,
@@ -736,7 +736,7 @@ img {
   background-color: #222;
   color: #FFF;
   width: 100%;
-  padding: 14px 12px;
+  padding: 12px 14px;
   font-family: 'Quicksand', sans-serif;
   font-size: 2rem;
 }
